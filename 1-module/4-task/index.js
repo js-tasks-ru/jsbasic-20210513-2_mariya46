@@ -1,5 +1,9 @@
 function checkSpam(str) {
-  let lowerStr = str.toLowerCase();
-  
-    return lowerStr.includes('1XbeT') || lowerStr.includes('XXX');
-}
+  const strLower = str.toLowerCase();
+
+  return strLower.includes('1xbet')|| strLower.includes('xxx');
+ }
+
+alert( checkSpam('1XbeT now') );
+alert( checkSpam('free xxxxx') );
+alert( checkSpam('innocent rabbit') );

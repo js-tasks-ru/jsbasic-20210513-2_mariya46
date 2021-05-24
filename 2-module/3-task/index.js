@@ -1,14 +1,14 @@
 let calculator = {
-  read() {
-    this.a = +prompt('a?', 0);
-    this.b = +prompt('b?', 0);
+  read: function (a, b) {
+    this.a = a;
+    this.b = b;
   },
   
-  sum() {
+  sum: function () {
     return this.a + this.b;
   },
 
-  mul() {
+  mul: function() {
     return this.a * this.b;
   }
 };

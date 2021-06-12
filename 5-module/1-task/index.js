@@ -1,6 +1,7 @@
 function hideSelf() {
-  addEventListener("click", function () {
-    let buttonHide = document.getElementsByClassName('hide-self-button');
-    buttonHide[0].setAttribute("hidden", "");
-  });
+  let buttonHide = document.querySelector('.hide-self-button');
+  buttonHide.addEventListener('click', function() {
+    buttonHide.setAttribute('hidden', 'hidden');
+    }
+  );
 }

@@ -41,8 +41,8 @@ export default class Carousel {
   }
 
   Carusel() {
-    let leftCarousel = this.elem.querySelectorAll('.carousel__arrow, .carousel__arrow_left')[0];
-    let rightCarousel = this.elem.querySelectorAll('.carousel__arrow, .carousel__arrow_left')[0];
+    let leftCarousel = this.elem.querySelectorAll('.carousel__arrow_left')[0];
+    let rightCarousel = this.elem.querySelectorAll('.carousel__arrow_right')[0];
     let carouselInner = this.elem.querySelectorAll('.carousel__inner')[0];
     let carouselCount = null;
     let numberSlide = 1;

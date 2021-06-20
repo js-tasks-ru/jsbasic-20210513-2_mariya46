@@ -43,7 +43,7 @@ export default class Modal {
     document.body.classList.remove("is-modal-open");
     this.elem.remove();
   }
-  OnKeyDown(event) {
+  onKeyDown(event) {
     let container = document.body.querySelector('.modal');
     if (event.code === 'Escape' && container) {
       document.body.classList.remove("is-modal-open");

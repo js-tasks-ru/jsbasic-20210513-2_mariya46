@@ -40,7 +40,7 @@ export default class Carousel {
     }));
   }
 
-  Carusel() {
+  carusel() {
     let leftCarousel = this.elem.querySelectorAll('.carousel__arrow_left')[0];
     let rightCarousel = this.elem.querySelectorAll('.carousel__arrow_right')[0];
     let carouselInner = this.elem.querySelectorAll('.carousel__inner')[0];

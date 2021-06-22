@@ -10,7 +10,7 @@ export default class Carousel {
     for (let elem of button) {
       elem.addEventListener('click', (event) => this.onClick(event));
     };
-    this.Carusel();
+    this.carusel();
   }
   render(caruselInner, slides) {
     const list = slides.map(value => `

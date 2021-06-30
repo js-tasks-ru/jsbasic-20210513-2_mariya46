@@ -45,7 +45,7 @@ export default class Cart {
   getTotalCount() {
     let totalCount = this.cartItems.map(item => (item.count));
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    return totalCount.reduce(reducer);
+    return totalCount.reduce(reducer, 0);
   }
 
   getTotalPrice() {
@@ -135,7 +135,9 @@ export default class Cart {
 
   }
 
+
   onProductUpdate(cartItem) {
+
     this.cartIcon.update(this);
     if (document.querySelector('body').classList.contains('is-modal-open')) {
       let productId = cartItem.product.id;
@@ -156,6 +158,7 @@ export default class Cart {
         document.querySelector(`[data-product-id="${productId}"]`).remove();
       } 
     }
+    
   }
 
   onSubmit(event) {
@@ -172,7 +175,7 @@ export default class Cart {
     })
     .then((response) => {
       if (response.ok) {
-        let modalBody = createElement(`<div class="modal__body-inner">
+        let body = createElement(`<div class="modal__body-inner">
         <p>
           Order successful! Your order is being cooked :) <br>
           We’ll notify you about delivery time shortly.<br>
@@ -181,7 +184,7 @@ export default class Cart {
       </div>
       `);
         this.modal.setTitle('Success!');
-        this.modal.setBody(modalBody);
+        this.modal.setBody(body);
         this.cartItems = [];
         this.cartIcon.update(this);
       } else {
@@ -194,4 +197,3 @@ export default class Cart {
     this.cartIcon.elem.onclick = () => this.renderModal();
   }
 }
-
